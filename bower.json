@@ -1,0 +1,16 @@
+{
+  "name": "Doble Página",
+  "version": "0.0.1",
+  "homepage": "http://www.hspencer.info/theme",
+  "author": "Herbert Spencer",
+  "description": "Novel Wordpress Theme",
+  "license": "Artistic Licence 2.0",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.2"
+  }
+}
