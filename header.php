@@ -14,7 +14,7 @@
 <body <?php body_class(); ?>>
 	<div id='wrapper' class='hfeed'>
 		<nav class="navbar navbar-default" role='navigation'>
-			<div class='container-fluid'>
+			<div class='container container-fluid'>
 				<section class='navbar-header' id='branding'>
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span>
@@ -22,30 +22,43 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">
-						<?php if ( ! is_singular() ) { echo '<h1>'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'dp' ); ?>" rel='home'><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a><?php if ( ! is_singular() ) { echo '</h1>'; } ?>
+					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'dp' ); ?>" rel='home'>
+						<?php echo esc_html( get_bloginfo( 'name' ) ); ?>
 					</a>
+					<!--
 					<span class='tagline' id='site-description'>
 						<?php bloginfo( 'description' ); ?>
-					</span>
+					</span> -->
 				</section>
-				<nav id='menu' role='navigation'>
-					<?php wp_nav_menu( array(
-						'menu'              => 'primary',
-						'theme_location'    => 'main-menu',
-						'depth'             => 2,
-						'container'         => 'div',
-						'container_class'   => 'collapse navbar-collapse',
-						'container_id'      => 'bs-example-navbar-collapse-1',
-						'menu_class'        => 'nav navbar-nav',
-						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-						'walker'            => new wp_bootstrap_navwalker())
-					);
-					?>
-					<li class='pull-right' id='search'>
-						<?php get_search_form(); ?>
-					</li>
-				</nav>
+				<div class='collapse navbar-collapse'>
+					<nav id='menu' role='navigation'>
+						<?php wp_nav_menu( array(
+							'menu'              => 'primary',
+							'theme_location'    => 'main-menu',
+							'depth'             => 2,
+							'container'         => 'div',
+							'container_class'   => '',
+							'container_id'      => 'bs-example-navbar-collapse-1',
+							'menu_class'        => 'nav navbar-nav',
+							'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+							'walker'            => new wp_bootstrap_navwalker())
+						);
+						?>
+						<form action="<?php echo home_url( '/' ); ?>" method="get" class="navbar-form navbar-right" role="search">
+							<div class="form-group">
+								<input type="text" name="s" class="form-control" placeholder="Buscar" id="search" value="<?php the_search_query(); ?>" />
+							</div>
+							<button type="submit" class="btn btn-default">OK</button>
+						</form>
+						<!-- 
+						<nav class='pull-right'>
+							<li  id='search'>
+								<?php get_search_form(); ?>
+							</li>
+						</nav>
+						-->
+					</nav>
+				</div>
 			</div>
 		</nav>
 		

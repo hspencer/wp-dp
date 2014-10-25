@@ -5,6 +5,7 @@ function dp_setup()
 	load_theme_textdomain( 'dp', get_template_directory() . '/languages' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'html5', array( 'search-form' ) );
 	global $content_width;
 	if ( ! isset( $content_width ) ) $content_width = 640;
 	register_nav_menus(

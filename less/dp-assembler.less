@@ -1,11 +1,11 @@
 
 @bootstrap-path: '../bower_components/bootstrap/less/';
-
+@pixograms-path: '../bower_components/pixograms/css/';
 
 // Core variables and mixins
 @import 'dp-variables.less';
 @import '@{bootstrap-path}mixins.less';
-
+@import 'mixins';
 // Reset
 @import '@{bootstrap-path}normalize.less';
 @import '@{bootstrap-path}print.less';
@@ -18,6 +18,7 @@
 @import '@{bootstrap-path}tables.less';
 @import '@{bootstrap-path}forms.less';
 @import '@{bootstrap-path}buttons.less';
+@import 'custom';
 
 // Components
 @import '@{bootstrap-path}component-animations.less';
