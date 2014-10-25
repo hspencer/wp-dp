@@ -1,11 +1,75 @@
 
-.post-edit-link{
-	.btn;
-	.btn-xs;
-	.btn-default;
-	.pull-right;
+a.navbar-brand {
+	font-family: @font-family-serif;
+	color: @black !important;
+	&:hover{
+		color: @black !important;
+		.longShadow(@gray-lighter, 5, 100);
+	}
 }
 
+
+.content:first-letter{
+	display: inline-block;
+	font-family: @font-family-serif;
+	float: left;
+	margin: 0 5px 5px 0;
+	font-size: 5.6em !important;
+}
+
+.form-control{
+	box-shadow: none !important;
+}
+
+h3.widget-title{
+	margin: 0 0 .1ex 0;
+}
+.widget-container{
+	>.well{
+		>ul{
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.huge{
+	font-size: 7em;
+	line-height: 80%;
+	word-break: break-all;
+	hyphens: auto;
+	.longShadow(@gray-lighter, 12);
+}
+.post-edit-link{
+	display: inline-block;
+	float: right;
+	margin: -19px -19px 19px 19px; // el padding del well
+	font-family: pix;
+	background-color: @black;
+	color: @white;
+	line-height: 130%;
+	text-align: center;
+	font-size: 32px;
+	.size(42px, 42px);
+	&:hover{
+		background-color: @brand-primary;
+		border: 1px solid @brand-primary;
+		text-decoration: none !important;
+		color: @white;
+	}
+}
+
+.tagcloud{
+	.clearfix;
+	a{
+		padding: 0 .5ex;
+		display: inline-block;
+		float: left;
+	}
+}
+.img{
+	max-width: 100%;
+}
 p.form-allowed-tags code{
 	display: inline-block;
 	white-space: pre-wrap;
@@ -16,19 +80,20 @@ input[type='submit']{
 	.btn-primary;
 }
 
-.well{
-	.clearfix;
-}
 
-footer{
-	color: @white;
-	padding: 1em 0 2em 0;
+#footer{
+	text-align: center;
+	font-size: .6em;
+	padding: 2em 0 3em 0;
 	a{
-		color: @white !important;
+		color: @black !important;
 	}
 }
 
-
+.xoxo{
+	margin: 0 !important;
+	padding: 0 !important;
+}
 #sidebar ul{
 	margin-left: 0 !important;
 	li{
@@ -37,9 +102,17 @@ footer{
 }
 
 .well{
-	.longShadowBox(@gray-light, 22, 100) !important;
+	.clearfix;
+	border: none;
+	.longShadowBox(@shadow-color, 22, 100) !important;
+	overflow: hidden;
 }
-
+.form-control:focus{
+	.longShadowBox(@shadow-color, 11, 100) !important;
+}
+.comment-form-author,
+.comment-form-email,
+.comment-form-url,
 .comment-form-comment{
 	.form-group;
 	label{
@@ -47,8 +120,14 @@ footer{
 		font-size: 1em;
 		font-family: @font-family-serif;
 	}
+	input,
 	textarea{
 		.form-control;
+		&:focus{
+			.longShadowBox(@shadow-color, 11, 100) !important;
+		}
+	}
+	textarea{
 		min-height: 200px;
 	}
 }

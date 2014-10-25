@@ -25,14 +25,14 @@
 @brand-success:         #5cb85c;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
-@brand-info:            #5bc0de;
+@brand-info:            @black;
 
 // Scaffolding
 // -------------------------
 
-@body-bg:               @brand-primary;
+@body-bg:               #F5F2E8;
 @text-color:            @gray-dark;
-
+@shadow-color: 			saturate(darken(@body-bg, 10), 10);
 // Links
 // -------------------------
 
@@ -41,12 +41,6 @@
 
 // Typography
 // -------------------------
-
-
-@font-path: 'fonts';
-@import '@{font-path}/junction/junction.less';
-@import '@{font-path}/chunkfive/chunkfive.less';
-@import '@{pixograms-path}pix-webfont.css';
 
 @font-family-sans-serif:  'Junction', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @font-family-serif:       'Chunkfive', Georgia, 'Times New Roman', Times, serif;
@@ -162,13 +156,13 @@
 // Forms
 // -------------------------
 
-@input-bg:                       #fff;
+@input-bg:                       @body-bg; // #fff;
 @input-bg-disabled:              @gray-lighter;
 
 @input-color:                    @gray;
-@input-border:                   #ccc;
+@input-border:                   transparent; //#ccc;
 @input-border-radius:            @border-radius-base;
-@input-border-focus:             #66afe9;
+@input-border-focus:             saturate(@shadow-color, 20%);// #66afe9;
 
 @input-color-placeholder:        @gray-light;
 
@@ -563,7 +557,6 @@
 // Wells
 // -------------------------
 @well-bg:                     @white;
-
 
 // Badges
 // -------------------------

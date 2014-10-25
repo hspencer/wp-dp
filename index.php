@@ -1,9 +1,8 @@
 <?php get_header(); ?>
 <div class="row">
 	<div class="col-md-6">
-		<div class="well">
-			<?php get_sidebar(); ?>
-		</div>
+		<?php get_sidebar(); ?>
+		<?php dynamic_sidebar( 'Alter' ); ?>
 	</div>
 	<div class="col-md-6">
 		<section id="content" role="main" class='well'>
@@ -15,14 +14,7 @@
 	</section>
 	</div>
 </div>
+<?php get_footer(); ?>
 
-<div class="row">
-	<div class="col-md-4">
-		<?php get_footer(); ?>
-	</div>
-	<div class="col-md-8">
-		<?php get_sidebar(); ?>
-	</div>
-</div>
 
 

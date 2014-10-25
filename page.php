@@ -1,16 +1,14 @@
 <?php get_header(); ?>
 <div class="row">
 	<div class="col-md-6">
-		<div class="well">
-			<?php get_sidebar(); ?>
-		</div>
+		<?php get_sidebar(); ?>
 	</div>
 	<div class="col-md-6">
 		<section id="content" role="main" class='well'>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="header">
-					<h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link(); ?>
+					<h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link("edit"); ?>
 				</header>
 				<section class="entry-content">
 					<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>

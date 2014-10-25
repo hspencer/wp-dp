@@ -46,9 +46,9 @@
 						?>
 						<form action="<?php echo home_url( '/' ); ?>" method="get" class="navbar-form navbar-right" role="search">
 							<div class="form-group">
-								<input type="text" name="s" class="form-control" placeholder="Buscar" id="search" value="<?php the_search_query(); ?>" />
+								<input type="text" name="s" class="form-control" placeholder="¿...?" id="search" value="<?php the_search_query(); ?>" />
 							</div>
-							<button type="submit" class="btn btn-default">OK</button>
+							<button type="submit" class="btn btn-info" style='margin-left: -5px'>Buscar</button>
 						</form>
 						<!-- 
 						<nav class='pull-right'>
