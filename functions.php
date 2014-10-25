@@ -64,3 +64,5 @@ function dp_comments_number( $count )
 		return $count;
 	}
 }
+
+require_once('wp_bootstrap_navwalker.php');
