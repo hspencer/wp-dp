@@ -104,9 +104,10 @@ a.navbar-brand {
 	color: @shadow-color;
 	text-shadow: 2px 1px 0 darken(@shadow-color, 15); 
 	position: relative;
-	z-index: 1000;
+	z-index: @zindex-dropdown - 100;
 }
 
+.content p:first-of-type:first-letter,
 .content:first-letter{
 	display: inline-block;
 	font-family: @font-family-serif;
@@ -132,8 +133,6 @@ a.navbar-brand {
 		height: auto;
 	}
 }
-
-
 
 #footer{
 	text-align: center;

@@ -20,18 +20,20 @@
 	</div>
 	<div class="col-md-6">
 		<section id="content" role="main" class='well'>
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<?php edit_post_link("edit"); ?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<section class="entry-content">
-					<?php the_content(); ?>
-					<div class="entry-links"><?php wp_link_pages(); ?></div>
-				</section>
-			</article>
-			<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
-		<?php endwhile; endif; ?>
-	</section>
-</div>
+			<div class="content">
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<?php edit_post_link("edit"); ?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<section class="entry-content">
+						<?php the_content(); ?>
+						<div class="entry-links"><?php wp_link_pages(); ?></div>
+					</section>
+				</article>
+				<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
+				<?php endwhile; endif; ?>
+			</div>
+		</section>
+	</div>
 </div>
 
 <?php get_footer(); ?>
