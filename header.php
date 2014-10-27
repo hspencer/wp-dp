@@ -16,7 +16,7 @@
 		<nav class="navbar navbar-default" role='navigation'>
 			<div class='container container-fluid'>
 				<section class='navbar-header' id='branding'>
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#walker">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -30,7 +30,7 @@
 						<?php bloginfo( 'description' ); ?>
 					</span> -->
 				</section>
-				<div class='collapse navbar-collapse'>
+				<div id='walker' class='collapse navbar-collapse'>
 					<nav id='menu' role='navigation'>
 						<?php wp_nav_menu( array(
 							'menu'              => 'primary',

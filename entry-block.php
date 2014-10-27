@@ -1,4 +1,4 @@
-<div class="col-md-6 abstract">
+<div class="col-md-3 abstract">
 	<article id="post-<?php the_ID(); ?>" <?php post_class('well'); ?> >
 	<header>
 		<div class="anti-well-with-text">

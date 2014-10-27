@@ -5,7 +5,9 @@ a:hover{text-decoration: none}
 
 .tcenter{text-align: center;}
 .tright{text-align: right;}
-
+.air{
+	margin: @line-height-computed 0;
+}
 // Navbar
 .navbar{
 	margin-bottom: @shadow-length-px * 3;
@@ -181,7 +183,8 @@ a.navbar-brand {
 
 .aftershadow{
 	background-color: fade(@shadow-color, 40);
-	margin: -@shadow-length-px -@shadow-length-px 0 @line-height-computed;
+	margin: -@shadow-length-px 0 0 @line-height-computed;
+	.box-shadow(@shadow-length-px 0 0 0 fade(@shadow-color, 40));
 	padding: @line-height-computed;
 }
 
