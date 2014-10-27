@@ -58,8 +58,8 @@ function dp_widgets_init()
 
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
-		'name' => 'Alter',
-		'id' => 'secondary-widget-area',
+		'name' => 'wide',
+		'id' => 'wide-widget-area',
 		'before_widget' => '<div id="%1$s" class="col-sm-12 widget-container %2$s"><div class="well">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="widget-title">',
@@ -83,6 +83,17 @@ if ( function_exists('register_sidebar') ) {
 		'name' => 'for pages',
 		'id' => 'single-widget-area',
 		'before_widget' => '<div id="%1$s" class="well widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	));
+}
+
+if ( function_exists('register_sidebar') ) {
+	register_sidebar(array(
+		'name' => 'clean',
+		'id' => 'clean-widget-area',
+		'before_widget' => '<div id="%1$s" class="col-sm-6 widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',

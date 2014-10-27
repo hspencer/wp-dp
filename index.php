@@ -1,9 +1,11 @@
 <?php get_header(); ?>
 <div class="row">
 	<div class="col-md-6">
-		<?php dynamic_sidebar( 'Alter' ); ?>
+		<?php dynamic_sidebar( 'wide' ); ?>
+		<?php dynamic_sidebar( 'clean' ); ?>
 		<?php get_sidebar(); ?>
 	</div>
+
 	<div class="col-md-6">
 		<section id="content" role="main" class='row'>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

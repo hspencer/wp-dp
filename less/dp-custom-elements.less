@@ -8,6 +8,11 @@ a:hover{text-decoration: none}
 .air{
 	margin: @line-height-computed 0;
 }
+
+.shadow{
+	.longShadowBox(@shadow-color, @shadow-length, 100);
+}
+
 // Navbar
 .navbar{
 	margin-bottom: @shadow-length-px * 3;
@@ -158,7 +163,13 @@ a.navbar-brand {
 	padding: @well-padding;
 	margin-bottom: @shadow-length-px;
 	border: 0px solid transparent;
-	.longShadowBox(@shadow-color, @shadow-length, 100);
+	overflow: hidden;
+	.shadow;
+}
+
+.well-transparent{
+	position: relative;
+	padding: @well-padding;
 	overflow: hidden;
 }
 
@@ -197,7 +208,7 @@ a.navbar-brand {
 
 .label{
 	display: inline-block;
-	font-size: 0.8em;
+	font-size: 0.7em;
 	white-space: nowrap;
 	background-color: fade(@shadow-color, 50);
 	color: darken(@shadow-color, 30);
@@ -208,7 +219,7 @@ a.navbar-brand {
 	background-repeat: no-repeat;
 	text-decoration: none;
 	text-transform: uppercase;
-	margin: 0 1px 0 0;
+	margin: 0 1px 1px 0;
 	&:hover{
 		color: @white;
 		text-decoration: none;
