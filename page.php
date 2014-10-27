@@ -1,17 +1,29 @@
 <?php get_header(); ?>
+<header class="header">
+	<h1 class='huge-entry-title'><?php echo get_the_title(); ?></h1>
+</header>
+
 <div class="row">
 	<div class="col-md-6">
-		<?php get_sidebar(); ?>
+		<div class="well">
+			<div class="anti-well-with-text">
+				<?php
+					if ( has_post_thumbnail() ) {
+						the_post_thumbnail('large');
+					}
+				?>
+			</div>
+		</div>
+		<div>
+			<?php dynamic_sidebar( 'for pages' ); ?>
+		</div>
 	</div>
 	<div class="col-md-6">
 		<section id="content" role="main" class='well'>
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php edit_post_link("edit"); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="header">
-					<h1 class="entry-title"><?php the_title(); ?></h1> <?php edit_post_link("edit"); ?>
-				</header>
 				<section class="entry-content">
-					<?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
 					<?php the_content(); ?>
 					<div class="entry-links"><?php wp_link_pages(); ?></div>
 				</section>

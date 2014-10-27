@@ -1,0 +1,79 @@
+// Widgets
+
+
+h3.widget-title{
+	margin-top: 0;
+}
+.widget-container{
+	>.well{
+		>ul{
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.xoxo{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+#sidebar ul{
+	margin-left: 0 !important;
+	li{
+		list-style-type: none;
+	}
+}
+
+// Tagcloud
+.tagcloud{
+	.clearfix;
+	a{
+		padding: 0 .5ex;
+		display: inline-block;
+		float: left;
+	}
+}
+
+// Instagram Widget: https://github.com/cftp/wp-instagram-widget
+// Muestra sólo 1 imagen grande
+ul.instagram-pics{
+	.anti-well;
+	li {
+		list-style-type: none;
+		a {
+			img{
+				width: 100% !important;
+				height: auto;
+			}
+		}
+	}
+}
+
+
+// YARP
+
+.yarpp-related-widget{
+	ol{
+		padding-left: 2em;
+	}
+}
+// Responsive 
+// ----------
+
+// Extra small screen / phone
+@media(max-width: @screen-xs-max){
+}
+
+// Small screen / tablet
+@media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+}
+
+// Medium screen / desktop
+@media (min-width: @screen-md) and (max-width: @screen-md-max){
+}
+
+// Large screen / wide desktop
+@media (min-width: @screen-lg){
+}
+
