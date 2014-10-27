@@ -40,7 +40,7 @@
 		<div class="col-md-6">
 			<div class="well">
 				<?php echo edit_post_link( "edit" ); ?> 
-				<div class="content">
+				<div class="content-entry">
 					<?php echo get_the_content(); ?>
 				</div>
 			</div>

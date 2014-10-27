@@ -55,10 +55,9 @@ a.navbar-brand {
 	position: absolute;
 	top: 0;
 	right: 0;
-	// margin: -@well-padding -@well-padding @well-padding @well-padding; 
 	font-family: pix;
-	background-color: fade(@shadow-color, 50);
-	color: fade(@black, 34);
+	background-color: @white;
+	color: @link-color;
 	line-height: 130%;
 	text-align: center;
 	font-size: 24px;
@@ -66,6 +65,9 @@ a.navbar-brand {
 	&:hover{
 		background-color: @brand-primary;
 		color: @white;
+	}
+	&:active{
+		text-decoration: none;
 	}
 }
 
@@ -114,8 +116,8 @@ a.navbar-brand {
 	z-index: @zindex-dropdown - 100;
 }
 
-.content p:first-of-type:first-letter,
-.content:first-letter{
+.entry-content p:first-of-type:first-letter,
+.entry-content:first-letter{
 	display: inline-block;
 	font-family: @font-family-serif;
 	float: left;
@@ -223,7 +225,7 @@ a.navbar-brand {
 
 a[rel="category"]{
 	.label;
-	background-color: @shadow-color;
+	background-color: darken(@shadow-color, 10);
 }
 
 .tag-small{
@@ -255,8 +257,14 @@ input[type='submit']{
 	.btn-primary;
 }
 
-.form-control:focus{
-	.longShadowBoxInset(@shadow-color, @shadow-length, 100) !important;
+.form-control{
+	transition: all ease .3s;
+	margin: 0;
+	&:focus{
+		transition: all ease .3s;
+		margin: -@shadow-length-px 0 0 -@shadow-length-px !important;
+		.longShadowBox(@shadow-color, @shadow-length, 100) !important;
+	}
 }
 
 .comment-form-author,
@@ -273,7 +281,8 @@ input[type='submit']{
 	textarea{
 		.form-control;
 		&:focus{
-			.longShadowBoxInset(@shadow-color, @shadow-length, 100) !important;
+			margin: -@shadow-length 0 0 -@shadow-length !important;
+			.longShadowBox(@shadow-color, @shadow-length, 100) !important;
 		}
 	}
 	textarea{

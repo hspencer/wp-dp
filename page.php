@@ -20,9 +20,9 @@
 	</div>
 	<div class="col-md-6">
 		<section id="content" role="main" class='well'>
-			<div class="content">
+			<?php edit_post_link("edit"); ?>
+			<div class="entry-content">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<?php edit_post_link("edit"); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<section class="entry-content">
 						<?php the_content(); ?>
