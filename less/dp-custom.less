@@ -56,8 +56,8 @@ a.navbar-brand {
 	top: 0;
 	right: 0;
 	font-family: pix;
-	background-color: @white;
-	color: @link-color;
+	background-color: fade(@white, 25);
+	color: fade(@link-color, 40);
 	line-height: 130%;
 	text-align: center;
 	font-size: 24px;
@@ -260,9 +260,10 @@ input[type='submit']{
 .form-control{
 	transition: all ease .3s;
 	margin: 0;
+	display: inline-block;
 	&:focus{
 		transition: all ease .3s;
-		margin: -@shadow-length-px 0 0 -@shadow-length-px !important;
+		margin: -@shadow-length-px @shadow-length-px @shadow-length-px -@shadow-length-px !important;
 		.longShadowBox(@shadow-color, @shadow-length, 100) !important;
 	}
 }
@@ -281,7 +282,7 @@ input[type='submit']{
 	textarea{
 		.form-control;
 		&:focus{
-			margin: -@shadow-length 0 0 -@shadow-length !important;
+			margin: -@shadow-length-px @shadow-length-px @shadow-length-px -@shadow-length-px !important;
 			.longShadowBox(@shadow-color, @shadow-length, 100) !important;
 		}
 	}
