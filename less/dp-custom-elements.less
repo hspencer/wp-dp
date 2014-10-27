@@ -1,4 +1,4 @@
-
+a:active,
 a:hover{text-decoration: none}
 
 // Helpers
@@ -89,7 +89,7 @@ a.navbar-brand {
 
 .huge{
 	font-size: 6em;
-	line-height: 80%;
+	line-height: 90%;
 	.hyphens(auto);
 	.longShadow(@gray-lighter, 12);
 	font-weight: 100;
@@ -113,15 +113,19 @@ a.navbar-brand {
 	font-family: @font-family-serif;
 	float: left;
 	font-weight: 900;
-	margin: 8px 10px 0 0px;
+	margin: 12px 10px 0 0px;
 	font-size: 2.9em !important;
+	line-height: .5em;
 }
 
 .content{
 	font-weight: 300;
 	font-size: 1.2em;
+	line-height: 1.6;
 	text-align: justify;
 	.hyphens(auto);
+	-moz-text-align-last: left; /* Code for Firefox */
+    text-align-last: left;
 }
 
 .entry-content{
@@ -157,7 +161,7 @@ a.navbar-brand {
 }
 
 .anti-well{
-	margin: -19px -19px -19px -19px !important;
+	margin: -@well-padding -@well-padding -@well-padding -@well-padding !important;
 	text-align: center;
 	.max,
 	img{
@@ -167,7 +171,7 @@ a.navbar-brand {
 }
 
 .anti-well-with-text{
-	margin: -19px -19px 0 -19px;
+	margin: -@well-padding -@well-padding 0 -@well-padding;
 	.max,
 	img{
 		width: 100%;
@@ -183,11 +187,12 @@ a.navbar-brand {
 
 // tags
 
-.tags{
+.labels{
 	line-height: 80%;
+	text-align: right;
 }
 
-.tag{
+.label{
 	display: inline-block;
 	font-size: 0.8em;
 	white-space: nowrap;
@@ -208,6 +213,11 @@ a.navbar-brand {
 	}
 }
 
+a[rel="category"]{
+	.label;
+	background-color: @shadow-color;
+}
+
 .tag-small{
 	display: inline-block;
 	margin: 0 1ex 0 0;
@@ -218,6 +228,9 @@ a.navbar-brand {
 	color: darken(@shadow-color, 50);
 }
 
+.entry-footer{
+	font-weight: 700;
+}
 // Forms
 
 .form-control{
@@ -286,7 +299,7 @@ input[type='submit']{
 			.reply{
 				text-align: right;
 				a.comment-reply-link{
-					.tag;
+					.label;
 				}
 			}
 		}
