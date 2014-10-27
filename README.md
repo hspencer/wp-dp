@@ -1,8 +1,6 @@
 Doble Página
 ============
 
-Tema para Wordpress
-
 <pre>
  ***********************************
  *                *                *
@@ -16,3 +14,19 @@ Tema para Wordpress
  *                *                *
  *********************************** 
 </pre>
+
+## Requeriemientos de Desarrollo
+* node.js
+* bower.io
+* less compiler
+
+## Dependencias
+* bootstrap
+* pixograms
+
+## Plugins Compatibles
+* [github-updater](https://github.com/afragen/github-updater/tree/master): Para actualizar el tema desde wordpress
+* [footnotes](http://www.elvery.net/drzax/more-things/wordpress-footnotes-plugin/)
+
+### Widgets
+* [Rich Related Posts](http://www.splicelicio.us/rich-related-posts-wordpress-plugin)
