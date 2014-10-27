@@ -108,7 +108,7 @@ a.navbar-brand {
 .huge-entry-title{
 	/* for pages only */
 	font-size: 8em;
-	font-weight: 200;
+	font-weight: 100;
 	margin: 0;
 	color: @shadow-color;
 	text-shadow: 2px 1px 0 darken(@shadow-color, 15); 
@@ -135,6 +135,8 @@ a.navbar-brand {
 	font-size: 1.2em;
 	line-height: 1.6;
 	text-align: justify;
+	text-justify: distribute;
+	word-spacing:-2px;
 	.hyphens(auto);
 	-moz-text-align-last: left; /* Code for Firefox */
     text-align-last: left;
@@ -345,6 +347,10 @@ input[type='submit']{
 			right: -2ex;
 		}
 	}
+	.well{padding: @well-padding/2;}
+	.anti-well{padding: -@well-padding/2 !important;}
+	.well-transparent{padding: @well-padding/2;}
+	.anti-well-with-text{margin: -@well-padding/2 -@well-padding/2 0 -@well-padding/2;}
 }
 
 // Small screen / tablet

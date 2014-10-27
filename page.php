@@ -4,7 +4,7 @@
 </header>
 
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-sm-6">
 		<div class="well">
 			<div class="anti-well">
 				<?php
@@ -17,11 +17,11 @@
 				?>
 			</div>
 		</div>
-		<div>
+		<div class='row'>
 			<?php dynamic_sidebar( 'for pages' ); ?>
 		</div>
 	</div>
-	<div class="col-md-6">
+	<div class="col-sm-6">
 		<section id="content" role="main" class='well'>
 			<?php edit_post_link("edit"); ?>
 			<div class="entry-content">

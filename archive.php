@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-sm-6">
 		<?php get_sidebar(); ?>
 	</div>
-	<div class="col-md-6">
+	<div class="col-sm-6">
 		<section id="content" role="main" class='well'>
 	<header class="header">
 		<h1 class="entry-title"><?php 

@@ -9,6 +9,9 @@ h3.widget-title{
 		>ul{
 			margin: 0;
 			padding: 0;
+			li{
+				list-style-type: none;
+			}
 		}
 	}
 }
@@ -38,13 +41,15 @@ h3.widget-title{
 // Instagram Widget: https://github.com/cftp/wp-instagram-widget
 // Muestra sólo 1 imagen grande
 ul.instagram-pics{
+	padding: 0;
 	.anti-well;
 	li {
 		list-style-type: none;
+		display: inline;
 		a {
 			img{
-				width: 100% !important;
-				height: auto;
+				// width: 100% !important;
+				// height: auto;
 			}
 		}
 	}
