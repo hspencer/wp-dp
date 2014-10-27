@@ -6,7 +6,7 @@
 <div class="row">
 	<div class="col-md-6">
 		<div class="well">
-			<div class="anti-well-with-text">
+			<div class="anti-well">
 				<?php
 					if ( has_post_thumbnail() ) {
 						the_post_thumbnail('large');
