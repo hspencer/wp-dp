@@ -25,7 +25,7 @@
 							the_post_thumbnail('large');
 						}
 						else {
-							echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/posts/rotate.php" />';
+							echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/rotate.php" />';
 						}
 						?>
 					</div>
