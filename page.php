@@ -32,10 +32,12 @@
 						<div class="entry-links"><?php wp_link_pages(); ?></div>
 					</section>
 				</article>
-				<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
-				<?php endwhile; endif; ?>
 			</div>
 		</section>
+		<div class='aftershadow'>
+			<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
+			<?php endwhile; endif; ?>
+		</div>
 	</div>
 </div>
 

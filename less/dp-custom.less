@@ -12,6 +12,7 @@ a:hover{text-decoration: none}
 .shadow{
 	.longShadowBox(@shadow-color, @shadow-length, 100);
 }
+.color{color: @brand-primary}
 
 // Navbar
 .navbar{
@@ -215,7 +216,7 @@ a.navbar-brand {
 	color: darken(@shadow-color, 30);
 	font-weight: 600;
 	text-shadow: 1px 1px 0 0 darken(@shadow-color, 30);
-	padding: 0.7ex 1ex .4ex;
+	padding: 0.5ex 1ex .2ex;
 	background-position: 100% 50% ;
 	background-repeat: no-repeat;
 	text-decoration: none;
@@ -228,20 +229,23 @@ a.navbar-brand {
 	}
 }
 
-a[rel="category"]{
-	.label;
-	background-color: darken(@shadow-color, 10);
-}
-
-.tag-small{
+.label-sm{
 	display: inline-block;
-	margin: 0 1ex 0 0;
+	margin: 0 1px 1px 0;
 	font-size: .75em;
 	white-space: nowrap;
 	text-transform: uppercase;
 	font-weight: 900;
 	color: darken(@shadow-color, 50);
 }
+
+a[rel="category"]{
+	.label;
+	background-color: darken(@shadow-color, 10);
+	color: @white;
+}
+
+
 
 .entry-footer{
 	font-weight: 700;

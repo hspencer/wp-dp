@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <header class="header">
-<h1 class="entry-title"><?php _e( 'Category Archives: ', 'dp' ); ?><?php single_cat_title(); ?></h1>
+<h1 class="entry-title"><?php _e( 'Archivos de: ', 'dp' ); ?><span class='color'><?php single_cat_title(); ?></span></h1>
 <?php if ( '' != category_description() ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . category_description() . '</div>' ); ?>
 </header>
 <div class="row">

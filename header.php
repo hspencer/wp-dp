@@ -9,6 +9,9 @@
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.min.js"></script>
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js"></script>
 
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/favicon.ico' ?>" />
+	<link rel="icon" type="image/png" href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/favicon.png' ?>" />
+
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -25,10 +28,6 @@
 					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( get_bloginfo( 'name' ), 'dp' ); ?>" rel='home'>
 						<?php echo esc_html( get_bloginfo( 'name' ) ); ?>
 					</a>
-					<!--
-					<span class='tagline' id='site-description'>
-						<?php bloginfo( 'description' ); ?>
-					</span> -->
 				</section>
 				<div id='walker' class='collapse navbar-collapse'>
 					<nav id='menu' role='navigation'>
@@ -48,15 +47,7 @@
 							<div class="form-group">
 								<input type="text" name="s" class="form-control" placeholder="Buscar..." id="search" value="<?php the_search_query(); ?>" />
 							</div>
-							<!-- <button type="submit" class="btn btn-info" style='margin-left: -5px'>Buscar</button> -->
 						</form>
-						<!-- 
-						<nav class='pull-right'>
-							<li  id='search'>
-								<?php get_search_form(); ?>
-							</li>
-						</nav>
-						-->
 					</nav>
 				</div>
 			</div>
