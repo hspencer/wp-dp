@@ -7,7 +7,7 @@
 		<div class="well">
 			<section id="content" role="main">
 				<header class="header">
-					<h1 class="entry-title"><?php _e( 'Tag Archives: ', 'dp' ); ?><?php single_tag_title(); ?></h1>
+					<h1 class="entry-title"><?php _e( 'Archivos de la Etiqueta: ', 'dp' ); ?><span class='color'><?php single_tag_title(); ?></span></h1>
 				</header>
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'entry' ); ?>
