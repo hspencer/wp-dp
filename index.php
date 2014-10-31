@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="row">
-	<div class="col-sm-6">
+	<div class="col-sm-6 hidden-xs">
 		<?php dynamic_sidebar( 'wide' ); ?>
 		<?php dynamic_sidebar( 'clean' ); ?>
 		<?php get_sidebar(); ?>

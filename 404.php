@@ -23,7 +23,6 @@
 				</section>
 			</div>
 		</div>
-		
 	</article>
 </section>
 <?php get_sidebar(); ?>

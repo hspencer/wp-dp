@@ -2,9 +2,6 @@
 // Variables
 // --------------------------------------------------
 
-@well-padding: 			 32px;
-@shadow-length: 		 6;
-@shadow-length-px: 		 6px;
 
 // Global values
 // --------------------------------------------------
@@ -33,9 +30,15 @@
 // Scaffolding
 // -------------------------
 
-@body-bg:               #F5F2E8;
+@body-bg:               #f9f8f3;
 @text-color:            @gray-dark;
-@shadow-color: 			saturate(darken(@body-bg, 10), 10);
+
+// Personal quirks
+
+@well-padding: 			 32px;
+@shadow-length: 		 3;
+@shadow-length-px: 		 6px;
+@shadow-color: 			darken(@body-bg, 10);
 // Links
 // -------------------------
 
@@ -256,7 +259,7 @@
 // Number of columns in the grid system
 @grid-columns:              12;
 // Padding, to be divided by two and applied to the left and right of all columns
-@grid-gutter-width:         @shadow-length-px;
+@grid-gutter-width:         @shadow-length-px * 2;
 
 // Navbar collapse
 

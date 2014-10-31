@@ -1,7 +1,6 @@
 <footer class="entry-footer">
 <span class="cat-links"><?php _e( 'Categories: ', 'dp' ); ?><?php the_category( ', ' ); ?></span>
 <span class="tag-links">
-	<!-- <?php the_tags('Tags: ',' • ','<br />'); ?> -->
 	<?php
 		$posttags = get_the_tags();
 		if ($posttags) {

@@ -111,10 +111,16 @@ a.navbar-brand {
 	font-size: 8em;
 	font-weight: 100;
 	margin: 0;
-	color: @shadow-color;
-	text-shadow: 2px 1px 0 darken(@shadow-color, 15); 
+	color: fade(@black, 50);
+	text-shadow: 2px 1px 0 fade(@shadow-color, 90); 
 	position: relative;
 	z-index: @zindex-dropdown - 100;
+}
+
+.category-title,
+.tag-title{
+	font-weight: 300;
+	font-size: 2.1em;
 }
 
 .content-entry p:first-of-type:first-letter,
@@ -355,6 +361,16 @@ input[type='submit']{
 	.anti-well{padding: -@well-padding/2 !important;}
 	.well-transparent{padding: @well-padding/2;}
 	.anti-well-with-text{margin: -@well-padding/2 -@well-padding/2 0 -@well-padding/2;}
+	.huge-entry-title{
+		.hyphens(auto);
+		font-size: 4em;
+	}
+	.content-entry,
+	.entry-content{
+		font-size: 1em;
+		font-weight: 500;
+		line-height: 1.4;
+	}
 }
 
 // Small screen / tablet
