@@ -30,7 +30,7 @@
 				<h1 class='huge'><?php echo get_the_title(); ?></h1>
 				<?php get_template_part( 'entry', 'meta' ); ?> 
 			</div>
-			<div class='hidden-xs'>
+			<div class='row hidden-xs'>
 				<?php dynamic_sidebar( 'for singles' ); ?>
 			</div>
 		</div>

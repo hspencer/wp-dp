@@ -71,8 +71,8 @@ if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
 		'name' => 'for singles',
 		'id' => 'single-widget-area',
-		'before_widget' => '<div id="%1$s" class="well widget-container %2$s">',
-		'after_widget' => '</div>',
+		'before_widget' => '<div class="col-sm-6"><div id="%1$s" class="well widget-container %2$s">',
+		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 		));
