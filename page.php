@@ -4,7 +4,7 @@
 </header>
 
 <div class="row">
-	<div class="col-sm-6">
+	<div class="col-sm-6 hidden-xs">
 		<div class="well">
 			<div class="anti-well">
 				<?php
