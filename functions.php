@@ -12,13 +12,25 @@ function dp_setup()
 	register_nav_menus(
 		array( 'main-menu' => __( 'Main Menu', 'dp' ) )
 		);
+	/*
+	 * Enable support for Post Formats.
+	 * See http://codex.wordpress.org/Post_Formats
+	 */
+	add_theme_support( 'post-formats', array(
+		'aside','chat', 'gallery', 'link', 'image', 'quote', 'status', 'video'
+		) );
+
+	// add post-formats to post_type 'page'
+	add_post_type_support( 'post', 'post-formats' );
 }
+
 add_action( 'wp_enqueue_scripts', 'dp_load_scripts' );
 
 function dp_load_scripts()
 {
 	wp_enqueue_script( 'jquery' );
 }
+
 add_action( 'comment_form_before', 'dp_enqueue_comment_reply_script' );
 
 function dp_enqueue_comment_reply_script()
@@ -120,4 +132,39 @@ function dp_comments_number( $count )
 	}
 }
 
+/*
+add_action('init', 'registerWidePosts');
+function registerWidePosts() {
+	register_post_type('wide', array(
+		'label' => 'Wide posts',
+		'description' => 'This is a wide post that uses both columns',
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'capability_type' => 'post',
+		'map_meta_cap' => true,
+		'hierarchical' => false,
+		'rewrite' => array('slug' => 'wide', 'with_front' => true),
+		'query_var' => true,
+		'supports' => array('title','editor','excerpt','trackbacks','custom-fields','comments','revisions','thumbnail','author','page-attributes','tags'),
+		'labels' => array (
+			'name' => 'wide posts',
+			'singular_name' => 'wide',
+			'menu_name' => 'Wide Posts',
+			'add_new' => 'Add Wide',
+			'add_new_item' => 'Add Wide Post',
+			'edit' => 'Edit',
+			'edit_item' => 'Edit Wide',
+			'new_item' => 'New Wide',
+			'view' => 'View Wide',
+			'view_item' => 'View Wide',
+			'search_items' => 'Search Wide Posts',
+			'not_found' => 'No Wide Posts Found',
+			'not_found_in_trash' => 'No Wide Posts Found in Trash',
+			'parent' => 'Parent Wide',
+			)
+		) ); 
+}
+*/
 require_once('wp_bootstrap_navwalker.php');
+

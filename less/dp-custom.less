@@ -13,7 +13,7 @@ a:hover{text-decoration: none}
 	.longShadowBox(@shadow-color, @shadow-length, 100);
 }
 .color{color: @brand-primary}
-
+.uc{text-transform: uppercase;}
 // Navbar
 .navbar{
 	margin-bottom: @shadow-length-px * 3;
@@ -108,11 +108,13 @@ a.navbar-brand {
 
 .huge-entry-title{
 	/* for pages only */
+	font-family: @font-family-sans-serif;
 	font-size: 8em;
 	font-weight: 100;
+	letter-spacing: -.15ex;
 	margin: 0;
-	color: fade(@black, 50);
-	text-shadow: 2px 1px 0 fade(@shadow-color, 90); 
+	color: @shadow-color;
+	//text-shadow: -2px -1px 0 @shadow-color; 
 	position: relative;
 	z-index: @zindex-dropdown - 100;
 }
@@ -141,7 +143,7 @@ a.navbar-brand {
 .content-entry,
 .entry-content{
 	font-weight: 300;
-	font-size: 1.3em;
+	font-size: 1.2em;
 	line-height: 1.6;
 	// text-align: justify;
 	text-justify: distribute;
@@ -218,6 +220,35 @@ a.navbar-brand {
 	height: auto;
 }
 
+.a-corte{
+	position: relative;
+	left: -@well-padding;
+	right: -@well-padding;
+	height: auto;
+	margin: 1em 0;
+}
+
+img.size-full,
+img.size-large{
+	.a-corte();
+}
+
+img{
+	&.size-full,
+	&.size-large{
+		.a-corte();
+	}
+	&.alignleft{
+		float: left;
+		margin: 1em 1em 1em 0;
+	}
+	&.alignright{
+		float: right;
+		margin: 1em 0 1em 1em;
+	}
+}
+
+
 // tags
 
 .labels{
@@ -276,6 +307,13 @@ a[rel="category"]{
 p.form-allowed-tags code{
 	display: inline-block;
 	white-space: pre-wrap;
+}
+
+// for contact form 7 plugin, leave sizes the same
+.wpcf7-form{
+	.form-group{
+		label{font-size: .6em !important}
+	}
 }
 
 input[type='submit']{
@@ -348,6 +386,11 @@ input[type='submit']{
 			}
 		}
 	}
+}
+
+
+.footnote-link{
+	font-weight: 700;
 }
 
 // Responsive 
