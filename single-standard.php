@@ -14,11 +14,27 @@
 			}
 		?>
 	</div>
-	<h1 class='huge-entry-title'><?php echo get_the_title(); ?></h1>
-	<?php get_template_part( 'entry', 'meta' ); ?> 
-	
 	<div class="row">
-		<div class="col-sm-12">
+		<div class="col-sm-6">
+			<div class="well">
+					<div class="anti-well-with-text">
+						<?php
+							if ( has_post_thumbnail() ) {
+								the_post_thumbnail('large');
+							}
+							else {
+								echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/img/rotate.php" />';
+							}
+						?>
+					</div>
+				<h1 class='huge'><?php echo get_the_title(); ?></h1>
+				<?php get_template_part( 'entry', 'meta' ); ?> 
+			</div>
+			<div class='row hidden-xs'>
+				<?php dynamic_sidebar( 'for singles' ); ?>
+			</div>
+		</div>
+		<div class="col-sm-6">
 			<div class="well">
 				<?php echo edit_post_link( "edit" ); ?> 
 				<div class="content-entry">
@@ -31,14 +47,6 @@
 		</div>
 	</div>
 	<?php endwhile; endif; ?>
-
-	<div class='row hidden-xs'>
-		<div class="col-sm-12">
-			<?php dynamic_sidebar( 'for singles' ); ?>
-		</div>
-	</div>
-	
-
 <footer class="footer">
 	<?php get_template_part( 'nav', 'below-single' ); ?>
 </footer>
