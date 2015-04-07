@@ -5,7 +5,8 @@ install:
 	bower install
 	
 css:
-	lessc less/dp-assembler.less dp.css --clean-css
+	lessc less/dp-assembler.less dp.css --clean-css="--s1 --advanced --compatibility=ie8"
+
 
 dist:
 	cp bower_components/bootstrap/dist/js/bootstrap.min.js js
