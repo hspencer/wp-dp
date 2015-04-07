@@ -129,8 +129,9 @@ a.navbar-brand {
 .content-entry p:first-of-type:first-letter,
 .entry-content p:first-of-type:first-letter,*/
 
+
 .content-entry:first-letter,
-.entry-content:first-letter{
+.entry-content p:first-child:first-letter{
 	display: inline-block;
 	font-family: @font-family-serif;
 	float: left;
@@ -194,6 +195,10 @@ a.navbar-brand {
 		height: auto;
 		vertical-align: bottom;
 	}
+}
+
+.anti-well-horizontal{
+		margin: 0 -@well-padding;
 }
 
 .anti-well-with-text{
