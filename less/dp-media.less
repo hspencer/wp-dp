@@ -13,16 +13,32 @@
 	margin: 1em 1em 1em 0;
 }
 
+.gallery{
+	width: 100%;
+	.anti-well-horizontal;
+}
+.gallery-caption, dt.gallery-icon{
+	padding: 0;
+}
 
 dl.gallery-item{
 	margin: 1em 0;
-	.anti-well-horizontal;
 }
 .gallery-caption,
 dt.gallery-icon{
-	font-size: 10px;
+	font-size: 11px;
 	font-weight: bold;
-	padding: 0 @well-padding;
+
+	a{
+		img{
+			border: none !important;
+			margin-bottom: 1ex;
+			&.attachment-large{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
 }
 
 img.size-full{
