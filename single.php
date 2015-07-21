@@ -38,7 +38,7 @@
 			<div class="well">
 				<?php echo edit_post_link( "edit" ); ?> 
 				<div class="content-entry">
-					<?php echo get_the_content(); ?>
+					<?php echo the_content(); ?>
 				</div>
 			</div>
 			<div class="aftershadow">
