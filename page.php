@@ -24,7 +24,7 @@
 	<div class="col-sm-6">
 		<section id="content" role="main" class='well'>
 			<?php edit_post_link("edit"); ?>
-			<div class="entry-content">
+			<div class='organic'>
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<section class="entry-content">
