@@ -140,6 +140,8 @@ article.abstract{
 			line-height: .75em;
 		}
 	}
+	ul,
+	ol,
 	p{
 		font-weight: 300;
 		font-size: 1.2em;
@@ -159,8 +161,12 @@ article.abstract{
 	text-align: center;
 	font-size: .8em;
 	padding: 2em 0 3em 0;
-	a{
-		color: fade(@black, 60) !important;
+	.license{
+		color: darken(@body-bg, 10);
+		margin: 2em 0;
+		a{
+			color: darken(@body-bg, 20) !important;
+		}
 	}
 }
 
@@ -365,6 +371,8 @@ input[type='submit']{
 .footnote-link{
 	font-weight: 700;
 }
+
+
 
 // Responsive 
 // ----------
