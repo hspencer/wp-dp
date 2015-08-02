@@ -21,7 +21,7 @@
 		<div class="col-sm-12">
 			<div class="well">
 				<?php echo edit_post_link( "edit" ); ?> 
-				<div class="content-entry">
+				<div class="entry-content">
 					<?php echo get_the_content(); ?>
 				</div>
 			</div>

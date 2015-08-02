@@ -72,27 +72,29 @@ a.navbar-brand {
 	}
 }
 
-.abstract{
+article.abstract{
 	position: relative;
-	article{
+	
 		header{
-			/*
-			.post-edit-link{
-				float: none;
-				position: relative;
-				top: -26px;
-			}*/
 			.tags{
 				margin: 0 0 1ex 0;
 			}
 		}
 		.entry-summary{
-			text-align: justify;
-			font-size: .9em;
-			.hyphens(auto);
-			// line-height: 100%;
+			p{
+				font-size: 1em;
+				font-weight: 100;
+				line-height: 1.2em;
+				text-align: justify;
+				font-size: .9em;
+				.hyphens(auto);
+			}
+			
 		}
-	}
+		.entry-footer{
+			font-weight: normal;
+		}
+	
 }
 
 // Single and general content
@@ -126,34 +128,31 @@ a.navbar-brand {
 }
 
 
-.content-entry p:first-of-type:first-letter,
-.entry-content p:first-of-type:first-letter,
-.content-entry:first-letter,
-.entry-content p:first-child:first-letter{
-	display: inline-block;
-	font-family: @font-family-serif;
-	float: left;
-	font-weight: 900;
-	margin: 8px 10px 0 0px;
-	font-size: 3.2em !important;
-	line-height: .75em;
-}
-
-.content-entry,
 .entry-content{
-	font-weight: 300;
-	font-size: 1.2em;
-	line-height: 1.6;
-	// text-align: justify;
-	text-justify: distribute;
-	word-spacing: normal;
-	.hyphens(auto);
-	-moz-text-align-last: left; /* Code for Firefox */
-    text-align-last: left;
-}
+	> p:first-child{
+		&:first-letter{
+			display: inline-block;
+			font-family: @font-family-serif;
+			float: left;
+			font-weight: 900;
+			margin: 8px 10px 0 0px;
+			font-size: 3.2em !important;
+			line-height: .75em;
+		}
+	}
+	p{
+		font-weight: 300;
+		font-size: 1.2em;
+		line-height: 1.6;
+		.hyphens(auto);
+		word-break: all;
+		text-align: justify;
+		text-justify: distribute;
+		-moz-text-align-last: left; /* Code for Firefox */
+	    text-align-last: left;
+		word-spacing: normal;
+	}
 
-.entry-content{
-	width: 100%;
 }
 
 #footer{
@@ -165,6 +164,11 @@ a.navbar-brand {
 	}
 }
 
+.ficha{
+	padding: @well-padding;
+	background-color: darken(@body-bg, 10);
+	font-size: .8em;
+}
 
 // Wells
 
@@ -185,7 +189,7 @@ a.navbar-brand {
 }
 
 .anti-well{
-	margin: -@well-padding -@well-padding -@well-padding -@well-padding !important;
+	margin: -(@well-padding + 2) -(@well-padding + 2) -(@well-padding + 2) -(@well-padding + 2) !important;
 	text-align: center;
 	.max,
 	img{
@@ -196,11 +200,11 @@ a.navbar-brand {
 }
 
 .anti-well-horizontal{
-		margin: 0 -@well-padding;
+		margin: 0 -(@well-padding + 2);
 }
 
 .anti-well-with-text{
-	margin: -@well-padding -@well-padding 0 -@well-padding;
+	margin: -(@well-padding + 2) -(@well-padding + 2) 0 -(@well-padding + 2) !important;
 	.max,
 	img{
 		width: 100%;
@@ -210,47 +214,13 @@ a.navbar-brand {
 
 .aftershadow{
 	background-color: fade(@shadow-color, 40);
-	margin: -@shadow-length-px/2 @shadow-length-px/2 0 @shadow-length-px;
+	margin: -@shadow-length-px/2 0 0 @shadow-length-px;
 	.box-shadow(@shadow-length-px 0 0 0 fade(@shadow-color, 40));
 	padding: @line-height-computed;
 }
 
 
-// Images
 
-.full-width{
-	margin: @line-height-computed 0;
-	width: 100%;
-	height: auto;
-}
-
-.a-corte{
-	position: relative;
-	left: -@well-padding;
-	right: -@well-padding;
-	height: auto;
-	margin: 1em 0;
-}
-
-img.size-full,
-img.size-large{
-	.a-corte();
-}
-
-img{
-	&.size-full,
-	&.size-large{
-		.a-corte();
-	}
-	&.alignleft{
-		float: left;
-		margin: 1em 1em 1em 0;
-	}
-	&.alignright{
-		float: right;
-		margin: 1em 0 1em 1em;
-	}
-}
 
 
 // tags
@@ -331,7 +301,7 @@ input[type='submit']{
 	display: inline-block;
 	&:focus{
 		transition: all ease .3s;
-		margin: -@shadow-length-px @shadow-length-px @shadow-length-px -@shadow-length-px !important;
+		margin: -@shadow-length-px/2 @shadow-length-px/2 @shadow-length-px/2 -@shadow-length-px/2 !important;
 		.longShadowBox(@shadow-color, @shadow-length, 100) !important;
 	}
 }
@@ -350,7 +320,7 @@ input[type='submit']{
 	textarea{
 		.form-control;
 		&:focus{
-			margin: -@shadow-length-px @shadow-length-px @shadow-length-px -@shadow-length-px !important;
+			margin: -@shadow-length-px/2 @shadow-length-px/2 @shadow-length-px/2 -@shadow-length-px/2 !important;
 			.longShadowBox(@shadow-color, @shadow-length, 100) !important;
 		}
 	}
@@ -391,7 +361,6 @@ input[type='submit']{
 		}
 	}
 }
-
 
 .footnote-link{
 	font-weight: 700;
