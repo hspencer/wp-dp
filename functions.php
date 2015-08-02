@@ -26,10 +26,11 @@ function dp_setup()
 
 add_action( 'wp_enqueue_scripts', 'dp_load_scripts' );
 
-function dp_load_scripts()
-{
-	wp_enqueue_script( 'jquery' );
-}
+#
+#function dp_load_scripts()
+#{
+#	wp_enqueue_script( 'jquery' );
+#}
 
 add_action( 'comment_form_before', 'dp_enqueue_comment_reply_script' );
 
